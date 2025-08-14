@@ -40,8 +40,8 @@ if (!$accessToken) {
     exit;
 }
 
-$modelName = "gpt-4.1-nano";
-$apiUrl = "https://oa-translation-zag.openai.azure.com/openai/deployments/gpt-4.1-nano/chat/completions?api-version=2025-01-01-preview";
+$modelName = "<YOUR_MODEL_NAME>";
+$apiUrl = "<YOUR_API_URL>";
 
 $message = "認証成功";
 $exceptionMessage = "";
