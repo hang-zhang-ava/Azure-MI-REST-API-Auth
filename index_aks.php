@@ -7,8 +7,6 @@ header('Content-Type: text/html');
 
 
 $endpoint = "http://169.254.169.254/metadata/identity/oauth2/token";
-$header = "true";
-
 
 $resource = "https://cognitiveservices.azure.com/";
 $apiVersion = "2018-02-01";
@@ -42,8 +40,9 @@ if (!$accessToken) {
     exit;
 }
 
-$modelName = "<YOUR_MODEL_NAME>";
-$apiUrl = "<YOUR_API_URL>";
+$modelName = "gpt-4.1-nano";
+$apiUrl = "https://oa-translation-zag.openai.azure.com/openai/deployments/gpt-4.1-nano/chat/completions?api-version=2025-01-01-preview";
+
 $message = "認証成功";
 $exceptionMessage = "";
 
