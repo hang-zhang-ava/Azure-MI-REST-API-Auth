@@ -12,7 +12,6 @@ $resource = "https://cognitiveservices.azure.com/";
 $apiVersion = "2018-02-01";
 
 $client = new Client([
-    'timeout' => 10.0,
 ]);
 
 try {
@@ -40,8 +39,8 @@ if (!$accessToken) {
     exit;
 }
 
-$modelName = "<YOUR_MODEL_NAME>";
-$apiUrl = "<YOUR_API_URL>";
+$modelName = "gpt-4.1-nano";
+$apiUrl = "https://oa-translation-zag.openai.azure.com/openai/deployments/gpt-4.1-nano/chat/completions?api-version=2025-01-01-preview";
 
 $message = "認証成功";
 $exceptionMessage = "";
@@ -99,7 +98,6 @@ try{
     echo "<p style='color:red;'>exceptionMessage: " . htmlspecialchars($exceptionMessage) . "</p>";
     echo "<p style='color:red;'>accessToken: " . htmlspecialchars($accessToken) . "</p>";
     echo "<p style='color:red;'>IDENTITY_ENDPOINT: " . htmlspecialchars($endpoint) . "</p>";
-    echo "<p style='color:red;'>IDENTITY_HEADER: " . htmlspecialchars($header) . "</p>";
 }
 
 ?>
